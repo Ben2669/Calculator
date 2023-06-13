@@ -42,6 +42,11 @@
                 result = num1 * num2;
                 break;
             case "/":
+                while (num2 == 0)
+                {
+                    Console.WriteLine("Enter a non-zero divisor: ");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+                }
                 result = num1 / num2;
                 break;
         }

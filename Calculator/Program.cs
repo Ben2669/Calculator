@@ -16,6 +16,7 @@ namespace CalculatorProgram
             Console.WriteLine("Hello, World! Welcome to Ben's amazing calculator console app!\r");
             Console.WriteLine("------------------------\n");
 
+            Calculator calculator = new Calculator();
             while (!endApp)
             {
                 // Declare variables and set to empty.
@@ -57,7 +58,7 @@ namespace CalculatorProgram
 
                 try
                 {
-                    result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
